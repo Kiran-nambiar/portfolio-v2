@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import { HeaderWrapper } from "./styles";
 
 const Header = () => {
@@ -11,9 +12,9 @@ const Header = () => {
       <button onClick={myFunction} id="hamburger" className="menu-toggle"></button>
       <nav>
         <ul className="menu">
-          <li className="nav-title" data-text="About">About</li>
-          <li className="nav-title" data-text="Work">Work</li>
-          <li className="nav-title" data-text="Contact">Contact</li>
+          <Link href="/about" color="unset" underline="none"><li className="nav-title" data-text="About">About</li></Link>
+          <Link href="/work" color="unset" underline="none"><li className="nav-title" data-text="Work">Work</li></Link>
+          <Link href="/contact" color="unset" underline="none"><li className="nav-title" data-text="Contact">Contact</li></Link>
         </ul>
       </nav>
     </HeaderWrapper>

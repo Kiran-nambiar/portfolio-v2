@@ -16,6 +16,18 @@ const GlobalStyle = createGlobalStyle`
     font-size: 40px;
   }
 
+  .mx-auto {
+    margin: auto;
+  }
+
+  .d-block {
+    display: block;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
 `;
 
 export default GlobalStyle;
