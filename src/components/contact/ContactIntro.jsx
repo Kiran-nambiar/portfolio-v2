@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
@@ -7,6 +7,7 @@ const Wrapper = styled.section`
     font-family: "Archivo Black", sans-serif;
     color: white;
     font-size: 100px;
+    font-weight: bold;
     @media (max-width: 992px) {
       margin: auto;
       text-align: center;
@@ -56,6 +57,9 @@ const Wrapper = styled.section`
   &:hover::after {
     transform: translate3d(100%,0,0);
   }
+  &.hover-animation::after {
+    transform: translate3d(100%,0,0);
+  }
   &::before{
     position: absolute;
     z-index: 2;
@@ -72,15 +76,26 @@ const Wrapper = styled.section`
 `;
 
 const ContactIntro = () => {
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    setIsHovered(true);
+  }, []);
+
+  const handleClick = () => {
+    document.getElementById('form').scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <Wrapper>
       <Grid container maxWidth="lg">
         <Grid item xs={12} className="contact-me-intro-container">
           <p className="contact-intro">
             Feel free to <br />
-            <a href="#form">
-              <span className="contact contact-animation">CONTACT</span>
-            </a>
+            <span onMouseEnter={() => setIsHovered(false)} onClick={handleClick} className={`contact contact-animation ${isHovered && 'hover-animation'}`}>CONTACT</span>
             &nbsp;me
           </p>
         </Grid>

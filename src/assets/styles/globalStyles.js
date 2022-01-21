@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
  html, body {
-    scroll-behavior: smooth;
     background-color: #111111;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -26,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
 
   .d-flex {
     display: flex;
+  }
+
+  .mt-2 {
+    margin-top: 20px;
   }
 
 `;

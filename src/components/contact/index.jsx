@@ -1,5 +1,6 @@
 import React from "react";
 import ContactIntro from "./ContactIntro";
+import ContactForm from "./ContactForm";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 const Contact = () => {
@@ -11,8 +12,8 @@ const Contact = () => {
                 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <ContactIntro />
             </ParallaxLayer>
-
             <ParallaxLayer offset={1} speed={3} style={{ backgroundColor: '#ff3535', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+                <ContactForm />
             </ParallaxLayer>
         </Parallax>
     );

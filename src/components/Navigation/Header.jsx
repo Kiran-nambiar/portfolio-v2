@@ -3,13 +3,13 @@ import { HeaderWrapper } from "./styles";
 
 const Header = () => {
 
-  function myFunction() {
+  function handleClick() {
     document.body.classList.toggle("open");
   }
 
   return (
     <HeaderWrapper>
-      <button onClick={myFunction} id="hamburger" className="menu-toggle"></button>
+      <button onClick={handleClick} id="hamburger" className="menu-toggle"></button>
       <nav>
         <ul className="menu">
           <Link href="/about" color="unset" underline="none"><li className="nav-title" data-text="About">About</li></Link>

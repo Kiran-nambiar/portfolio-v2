@@ -4,13 +4,16 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Homepage from "./components/home";
 import Header from "./components/Navigation/Header";
+import { useLocation } from "react-router-dom";
 
 function App() {
+
+  const location = useLocation();
 
   return (
     <div className="App">
       <GlobalStyle />
-      <Header />
+      {location.pathname === "/" ? null : <Header />}
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path="/about" element={<About />} />
