@@ -5,6 +5,7 @@ import Contact from "./components/contact";
 import Homepage from "./components/home";
 import Header from "./components/Navigation/Header";
 import { useLocation } from "react-router-dom";
+import Technologies from "./components/work/Technologies";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Homepage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/work" element={<Technologies />} />
       </Routes>
     </div>
   );
